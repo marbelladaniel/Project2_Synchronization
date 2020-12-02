@@ -1,6 +1,2 @@
-shm_proc: shm_processes.c
-	gcc shm_processes.c -D_SVID_SOURCE -pthread -std=c99 -lpthread  -o shm_proc
-example: example.c
-	gcc example.c -pthread -std=c99 -lpthread  -o example
-bank: bank.c
-	gcc bank.c -pthread -std=c99 -lpthread  -o bank
+server:  server.c list.c server_client.c
+	gcc server.c server_client.c list.c -lpthread -Wformat -Wall -o server
